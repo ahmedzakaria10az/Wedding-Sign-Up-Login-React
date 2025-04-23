@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* اجعل الصفحة تأخذ كامل الشاشة */
+}
+
+.desktop-container {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    background-color: #FAF3E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 1216px;
+    height: auto;
+    border-radius: 20px;
+    background-color: #F0B9BD;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.signup-image {
+    width: 50%;
+    height: 530px;
+    object-fit: cover;
+}
+
+.login-form {
+    width: 50%;
+    padding: 20px;
+    background-color: #F0B9BD;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-form h1 {
+    font-family: 'Poetsen One', sans-serif;
+    font-size: 2.5rem;
+    color: #FAF3E0;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px 5px black; /* إضافة ظل أسود للنص */
+}
+
+.login-form p {
+    font-family: 'Almarai', sans-serif;
+    font-size: 1.2rem;
+    color: #474747;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.login-form button {
+    width: 100%;
+    max-width: 258px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #327537;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: -20px auto 0; /* رفع الزر للأعلى ووضعه في المنتصف */
+    display: block; /* تأكد من أن الزر يظهر كسطر منفصل */
+}
+
+.login-form button:hover {
+    background-color: #285c2e;
+}
+
+.remember-me-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Almarai', sans-serif;
+    font-size: 16px;
+    color: #474747;
+    margin: 0 0 20px 0; /* إضافة مسافة سفلية فقط */
+    position: relative; /* لتحديد موضع العنصر */
+    top: -7px; /* رفع العنصر فوق زر Login */
+    left: 50px; 
+
+}
+
+.remember-me-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.forget-password {
+    font-family: 'Almarai', sans-serif;
+    font-size: 1rem;
+    color: #474747;
+    text-decoration: none;
+    margin-top: 0px;
+    position: relative; /* لتحديد موضع العنصر */
+    top: -85px; /* رفع العنصر فوق زر Login */
+    right: -190px; /* محاذاة العنصر إلى اليمين */
+    display: inline-block; /* تأكد من أن العنصر يظهر كسطر منفصل */
+    text-align: right;
+}
+
+.forget-password:hover {
+    text-decoration: underline;
+}
+
+.signup-link-container {
+    margin-top: 20px;
+    font-family: 'Almarai', sans-serif;
+    font-size: 1rem;
+    color: #474747;
+    text-align: center;
+}
+
+.signup-link {
+    color: #327537;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.password-wrapper {
+position: relative;
+width: 80%;
+margin: 1px 39px;
+}
+
+.password-wrapper input {
+width: 100%;
+}
+
+.password-wrapper svg {
+position: absolute;
+right: 2px;
+top: 50%;
+transform: translateY(-50%);
+color: #555;
+cursor: pointer;
+}
+
+
+/* Media Query للموبايل */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto; /* اجعل الحاوية تأخذ الحجم المطلوب فقط */
+        background-color: #F0B9BD;
+        padding: 10px; /* تقليل الحشوات */
+        box-shadow: none; /* إزالة الظل لتقليل التعقيد */
+    }
+
+    .signup-image {
+        display: none; /* إخفاء الصورة على الشاشات الصغيرة */
+
+    }
+
+    .login-form {
+        width: 100%;
+        padding: 15px; /* تقليل الحشوات داخل النموذج */
+        margin: 0 auto; /* محاذاة النموذج في المنتصف */
+    }
+
+    .login-form h1 {
+        font-size: 1.8rem; /* تقليل حجم العنوان */
+        margin-bottom: 15px; /* تقليل المسافة السفلية */
+        position: relative; /* لتحديد الموضع */
+        right: 15px;             }
+
+    .login-form p {
+        font-size: 0.9rem; /* تقليل حجم النص */
+        margin-bottom: 15px; /* تقليل المسافة السفلية */
+        position: relative; /* لتحديد الموضع */
+        right: 15px;             }
+
+    .login-form input {
+        font-size: 0.9rem;
+        padding: 8px; /* تقليل الحشوات داخل الحقول */
+        margin: 8px 0; /* تقليل المسافات بين الحقول */
+        position: relative; /* لتحديد الموضع */
+        right: 15px; 
+    }
+
+.remember-me-container {
+display: flex;
+align-items: center;
+font-family: 'Almarai', sans-serif;
+font-size: 15px; /* تقليل حجم النص */
+color: #474747;
+margin-bottom: 15px;
+margin-top: 5px; /* تقليل المسافة العلوية */
+
+position: relative; /* لتحديد موضع العنصر */
+left: 25px; /* محاذاة العنصر إلى اليسار */
+}
+
+.remember-me-container input[type="checkbox"] {
+width: 15px; /* تقليل حجم مربع الاختيار */
+height: 15px; /* تقليل حجم مربع الاختيار */
+cursor: pointer;
+position: relative; /* لتحديد موضع العنصر */
+left: 2px; /* محاذاة العنصر إلى اليسار */
+}
+
+    .forget-password {
+        display: flex;
+align-items: center;
+font-family: 'Almarai', sans-serif;
+font-size: 15px; /* تقليل حجم النص */
+color: #474747;
+margin-bottom: 5px;
+margin-top: 1px; /* تقليل المسافة العلوية */
+position: relative; /* لتحديد موضع العنصر */
+left: 300px; /* محاذاة العنصر إلى اليسار */
+    }
+
+    .login-form button {
+        font-size: 0.9rem;
+        padding: 10px; /* تقليل الحشوات داخل الزر */
+        margin-top: 1px; /* تقليل المسافة العلوية */
+        margin-bottom: 1px;
+
+        position: relative; /* لتحديد الموضع */
+        right: 15px; 
+    }
+
+    .signup-link-container {
+        font-size: 0.9rem;
+        position: relative; /* لتحديد الموضع */
+        right: 15px;
+        margin-top: 5px;
+    }
+    
+    .password-wrapper {
+        position: relative;
+        width: 80%;
+        margin: 1px 39px;
+}
+
+.password-wrapper input {
+width: 100%;
+}
+
+.password-wrapper svg {
+position: absolute;
+right: 15px;
+top: 50%;
+transform: translateY(-50%);
+color: #555;
+cursor: pointer;
+}}

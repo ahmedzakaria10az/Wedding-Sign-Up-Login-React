@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #faf3e0;
+    font-family: 'Almarai', sans-serif;
+  }
+  
+  .desktop-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #faf3e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .signup-container {
+    width: 100%;
+    max-width: 1216px;
+    border-radius: 20px;
+    background-color: #f0b9bd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .signup-image {
+    width: 50%;
+    height: 550px;
+    object-fit: cover;
+  }
+  
+  .signup-form {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .signup-form h1 {
+    font-family: 'Poetsen One', sans-serif;
+    font-size: 2.5rem;
+    color: #faf3e0;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px 5px black;
+  }
+  
+  .signup-form p {
+    font-size: 1.2rem;
+    color: #474747;
+    margin-bottom: 20px;
+  }
+  
+  .signup-form input {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+  }
+  
+  .password-wrapper {
+    position: relative;
+    width: 80%;
+    margin: 1px 40px;
+}
+
+.password-wrapper input {
+    width: 100%;
+}
+
+.password-wrapper svg {
+    position: absolute;
+    top: 25px;       /* يحرك العين لأعلى */
+    right: 5px;     /* يحرك العين لليسار */
+    color: #555;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+
+  
+  .radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .radio-group label {
+    font-size: 1rem;
+    color: #474747;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .radio-group input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .signup-form button {
+    width: 100%;
+    max-width: 258px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #327537;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-form button:hover {
+    background-color: #285c2e;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    signup-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto; /* اجعل الحاوية تأخذ الحجم المطلوب فقط */
+        background-color: #F0B9BD;
+        padding: 10px; /* تقليل الحشوات */
+        box-shadow: none; /* إزالة الظل لتقليل التعقيد */
+        
+    }
+
+    .signup-image {
+        display: none; /* إخفاء الصورة على الشاشات الصغيرة */
+    }
+
+    .signup-form {
+        width: 100%;
+        padding: 15px; /* تقليل الحشوات داخل النموذج */
+        margin: 0 auto; /* محاذاة النموذج في المنتصف */
+    }
+
+    .signup-form h1 {
+        font-size: 1.8rem; /* تقليل حجم العنوان */
+        margin-bottom: 15px; /* تقليل المسافة السفلية */
+        position: relative; /* لتحديد الموضع */
+        right: 15px; 
+    }
+
+    .signup-form p {
+        font-size: 0.9rem; /* تقليل حجم النص */
+        margin-bottom: 15px; /* تقليل المسافة السفلية */
+        position: relative; /* لتحديد الموضع */
+        right: 15px; 
+    }
+
+    .signup-form input {
+        font-size: 0.9rem;
+        padding: 8px; /* تقليل الحشوات داخل الحقول */
+        margin: 8px 0; /* تقليل المسافات بين الحقول */
+        position: relative; /* لتحديد الموضع */
+        right: 15px; 
+        margin-left: 30px; /* محاذاة اليسار */
+  margin-right: auto; /* يمكن أن يساعد في محاذاة الحقل لليسار */
+    }
+
+    .radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+    position: relative; /* لتحديد الموضع */
+    right: 12px; 
+}
+
+.radio-group label {
+    font-family: 'Almarai', sans-serif;
+    font-size: 0.9rem;
+    color: #474747;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+.radio-group input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    position: relative; /* لتحديد الموضع */
+    right: 1px; 
+}
+  
+
+    .signup-form button {
+        font-size: 0.9rem;
+        padding: 10px; /* تقليل الحشوات داخل الزر */
+        margin-top: 10px; /* تقليل المسافة العلوية */
+        position: relative; /* لتحديد الموضع */
+        right: 5px; 
+        top: -10px;
+    }
+
+.password-wrapper {
+position: relative;
+width: 80%;
+margin: 8px 0; /* تقليل المسافات بين الحقول */
+
+}
+
+.password-wrapper input {
+width: 100%;
+margin: 8px 17px; /* تقليل المسافات بين الحقول */
+
+
+}
+
+.password-wrapper svg {
+    position: absolute;
+    top: 17px;       /* يحرك العين لأعلى */
+    right: 2px;     /* يحرك العين لليسار */
+    color: #555;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+}
